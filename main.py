@@ -1,42 +1,14 @@
+import string
+text = "123 ."
+text = text.capitalize()
+digits_count = sum(c.isdigit() for c in text)
+punctuation_count = sum(c in string.punctuation for c in text)
+exclamation_count = text.count('!')
 
-input_string = input("Ряд: ")
+print(f"Исправленный текст: {text}")
 
-if input_string == input_string[::-1]:
+print(f"Количество цифр: {digits_count}")
 
- print("Пал+")
+print(f"Количество знаков препинания: {punctuation_count}")
 
-else:
-
- print("Пал-")
-
-
-text = input("Текст: ")
-
-reserved_words = input("Слова через запятую: ").split(',')
-
-
-
-for word in text.split():
-
-
-
- if word.lower() in reserved_words:
-
-   text = text.replace(word, word.upper())
-
-
-
-print(text)
-
-
-
-text = input("Текст: ")
-
-
-
-num_sentences = text.count('.') + text.count('!') + text.count('?')
-
-
-
-print(f"Предложения в тексте: {num_sentences}")
-
+print(f"Количество восклицательных знаков: {exclamation_count}")
