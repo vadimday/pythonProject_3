@@ -1,5 +1,16 @@
-import re
-text = "sdaifopjsdofisdhjiofa.oaisfhsdoiufhsf!!!sepofjifjifs"
-sentences = re.findall(r"\s*([^.?!]+)\s*", text)
-print(f"Найдено: {len(sentences)}.\nНайденные предложения: {sentences}.")
+def отображение_непарных(число1, число2):
 
+   старт = min(число1, число2)
+
+   конець = max(число1, число2)
+   for число in range(старт + 1, конець):
+
+       if число % 2 != 0:
+
+           print(число)
+
+число1 = 19
+
+число2 = 27
+
+отображение_непарных(число1, число2)
