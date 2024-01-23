@@ -1,11 +1,5 @@
-text = input("Текст: ")
+import re
+text = "sdaifopjsdofisdhjiofa.oaisfhsdoiufhsf!!!sepofjifjifs"
+sentences = re.findall(r"\s*([^.?!]+)\s*", text)
+print(f"Найдено: {len(sentences)}.\nНайденные предложения: {sentences}.")
 
-reserved_words = input("Слова через запятую: ").split(",")
-
-for word in reserved_words:
-
-   text = text.replace(word.strip(), word.strip().upper())
-
-print(" текст:")
-
-print(text)
