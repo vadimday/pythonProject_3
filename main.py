@@ -1,19 +1,19 @@
+def calculate_average(lst):
+    if not lst:
+        return 0
+    total_sum = sum(lst)
+    average = total_sum / len(lst)
+    return average
 def main():
-   try:
+    try:
+        input_str = input("целое число: ")
+        integer_list = [int(num) for num in input_str.split()]
+        total_sum = sum(integer_list)
+        average = calculate_average(integer_list)
+        print(f"сумма елементов: {total_sum}")
+        print(f"среднее: {average}")
 
-       elements = input("Ввести: ").split()
-
-       elements = [int(element) for element in elements]
-
-       number_to_find = int(input("Ввести: "))
-
-       count = elements.count(number_to_find)
-       print(f"Число {number_to_find} есть в списке {count} раз.")
-
-   except ValueError:
-
-       print("Ввести.")
-
+    except ValueError:
+        print("ошибка.")
 if __name__ == "__main__":
-
-   main()
+    main()
