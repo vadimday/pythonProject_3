@@ -1,14 +1,19 @@
-import string
-text = "123 ."
-text = text.capitalize()
-digits_count = sum(c.isdigit() for c in text)
-punctuation_count = sum(c in string.punctuation for c in text)
-exclamation_count = text.count('!')
+def main():
+   try:
 
-print(f"Исправленный текст: {text}")
+       elements = input("Ввести: ").split()
 
-print(f"Количество цифр: {digits_count}")
+       elements = [int(element) for element in elements]
 
-print(f"Количество знаков препинания: {punctuation_count}")
+       number_to_find = int(input("Ввести: "))
 
-print(f"Количество восклицательных знаков: {exclamation_count}")
+       count = elements.count(number_to_find)
+       print(f"Число {number_to_find} есть в списке {count} раз.")
+
+   except ValueError:
+
+       print("Ввести.")
+
+if __name__ == "__main__":
+
+   main()
